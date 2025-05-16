@@ -85,7 +85,157 @@
         }
     }
 }
-
 //====================================================================================================
+// Mission
+// .mission {
+//     // .mission__container
+//     &__container {
+//         background-image: url("@img/mission.png");
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         min-height: toRem(480);
+//         @media (max-width: $tablet) {
+//             background-image: url("@img/mission-tab.png");
+//             background-size: contain;
+//             background-position: center center;
+//             min-height: auto;
+//             height: toRem(100);
+//         }
+//         @media (max-width: $mobile) {
+//             background-image: url("@img/mission-mob.png");
+//             padding: toRem(30) toRem(15);
+//             background-size: cover;
+//         }
+//     }
+//     // .mission__wrapper
+//     &__wrapper {
+//         display: grid;
+//         grid-template-columns: repeat(2, 1fr);
+//         row-gap: toRem(28);
+//         padding: toRem(0) toRem(30);
+//         @include adaptiveValue("column-gap", 240, -200);
+//         @media (max-width: $tablet) {
+//             grid-template-columns: repeat(1, 1fr);
+//             padding: 0;
+//         }
+//     }
+//     // .mission__item
+//     &__item {
+//         padding: toRem(6) toRem(15);
+//         display: flex;
+//         align-items: flex-start;
+//         gap: toRem(20);
+//         flex-shrink: 0;
+//         background: linear-gradient(222deg, #fff 29.19%, #f2f2f2 70.3%, #e3e3e3 97.6%);
+//         box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.25);
+//         @media (max-width: $tablet) {
+//             max-width: toRem(509);
+//             justify-self: center;
+//         }
+//     }
+//     // .mission__item-num
+//     &__item-num {
+//         color: rgba(134, 134, 134, 0.25);
+//         font-style: normal;
+//         font-weight: 200;
+//         line-height: toRem(62); /* 73.81% */
+//         @include adaptiveValue("font-size", 84, 64);
+//     }
+//     // .mission__item-desc
+//     &__item-desc {
+//         padding: toRem(10);
+//         color: #5a5a5a;
+//         font-style: normal;
+//         font-weight: 400;
+//         line-height: toRem(24); /* 150% */
+//         @include adaptiveValue("font-size", 16, 12);
+//     }
+// }
+
+.mission {
+    // .mission__container
+    @media (max-width: $tablet) {
+        padding-top: toRem(110);
+        padding-bottom: toRem(110);
+    }
+    @media (max-width: $mobile) {
+        padding-top: toRem(0);
+        padding-bottom: toRem(0);
+    }
+    &__container {
+        background-image: url("@img/mission.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: toRem(480);
+
+        @media (max-width: $tablet) {
+            background-image: url("@img/mission-tab.png");
+            background-size: 100% auto;
+            background-position: center center;
+            min-height: auto;
+            height: toRem(700);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: $mobile) {
+            background-image: url("@img/mission-mob.png");
+            background-size: cover;
+            padding: toRem(30) toRem(15);
+            height: auto;
+            min-height: toRem(480);
+        }
+    }
+
+    // .mission__wrapper
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: toRem(28);
+        padding: toRem(0) toRem(30);
+        @include adaptiveValue("column-gap", 240, -200);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0;
+            width: 100%;
+            // margin-top: toRem(110);
+        }
+    }
+
+    // .mission__item
+    &__item {
+        padding: toRem(6) toRem(15);
+        display: flex;
+        align-items: flex-start;
+        gap: toRem(20);
+        flex-shrink: 0;
+        background: linear-gradient(222deg, #fff 29.19%, #f2f2f2 70.3%, #e3e3e3 97.6%);
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.25);
+
+        @media (max-width: $tablet) {
+            max-width: toRem(509);
+            justify-self: center;
+        }
+    }
+
+    // .mission__item-num
+    &__item-num {
+        color: rgba(134, 134, 134, 0.25);
+        font-weight: 200;
+        line-height: toRem(62); /* 73.81% */
+        @include adaptiveValue("font-size", 84, 64);
+    }
+
+    // .mission__item-desc
+    &__item-desc {
+        padding: toRem(10);
+        color: #5a5a5a;
+        font-weight: 400;
+        line-height: toRem(24); /* 150% */
+        @include adaptiveValue("font-size", 16, 12);
+    }
+}
+//========================================================================================================================================================
 
 //========================================================================================================================================================
