@@ -391,5 +391,156 @@
     &__desc {
     }
 }
+//========================================================================================================================================================
+// Solutions
+.solutions {
+    position: relative;
+    // .solutions__container
+    &__container {
+    }
+    // .solutions__top
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: toRem(20);
+        div {
+            @include adaptiveValue("max-width", 900, 100);
+            @media (max-width: $tablet) {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+        }
+        img {
+            display: block;
+            @media (max-width: $tablet) {
+                display: none;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
+            &:nth-child(3) {
+                display: none;
+                @media (max-width: $tablet) {
+                    display: block;
+                    max-height: toRem(206);
+                }
+                @media (max-width: $mobile) {
+                    // display: none;
+                }
+            }
+            &:nth-child(4) {
+                display: none;
+                @media (max-width: $mobile) {
+                    // display: block;
+                }
+            }
+        }
+    }
+    // .solutions__title
+    &__title {
+    }
+    // .solutions__desc
+    &__desc {
+    }
+    // .solutions__wrapper
+    &__wrapper {
+        margin-top: toRem(80);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include adaptiveValue("gap", 80, 40);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: toRem(80);
+        }
+    }
+    // .solutions__item
+    &__item {
+        position: relative;
+        padding: toRem(20) toRem(20) toRem(70) toRem(20);
+        background: linear-gradient(222deg, #fff 59.2%, #dbdada 97.6%);
+        box-shadow: 0px 6px 12px 0px rgba(134, 134, 134, 0.25);
+        @media (max-width: $tablet) {
+            &::before {
+                content: "";
+                position: absolute;
+                top: toRem(-50);
+                left: 0;
+                width: 100vw;
+                margin-left: calc(-50vw + 50%);
+                height: toRem(70);
+                background-image: url("@img/solutions-bg.png"); /* шлях до зображення */
+                background-size: contain; /* або cover, залежно від потреб */
+                background-repeat: no-repeat;
+                background-position: center;
+                z-index: -1; /* якщо потрібно контролювати порядок накладання */
+            }
+        }
+    }
+    // .solutions__list
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(18);
+    }
+    // .solutions__list-item
+    &__list-item {
+        padding-left: toRem(45);
+        position: relative;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        @include adaptiveValue("font-size", 16, 12);
+        list-style: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: toRem(5);
+            width: toRem(29);
+            height: toRem(22);
+            background-image: url("@img/icons/check.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+    &__btn {
+        border: none !important;
+        position: absolute;
+        bottom: toRem(-15);
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        @media (max-width: $tablet) {
+            gap: toRem(10);
+            span {
+                display: block;
+                font-size: toRem(16);
+            }
+        }
+        @media (max-width: $mobile) {
+            span {
+                font-size: toRem(11);
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            span {
+                font-size: toRem(8);
+            }
+        }
+    }
+    &__bg {
+        position: absolute;
+        top: toRem(300);
+        width: 100%;
+        max-height: toRem(108);
+        z-index: -1;
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+}
 
 //========================================================================================================================================================

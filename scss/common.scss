@@ -40,7 +40,7 @@ section {
 // btn
 .btn {
     position: relative;
-    display: flex;
+    display: inline-flex;
     padding: toRem(6) toRem(10);
     align-items: center;
     gap: toRem(12);
