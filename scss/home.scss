@@ -462,6 +462,9 @@
         background: linear-gradient(222deg, #fff 59.2%, #dbdada 97.6%);
         box-shadow: 0px 6px 12px 0px rgba(134, 134, 134, 0.25);
         @media (max-width: $tablet) {
+            max-width: 80% !important;
+            width: 80% !important;
+            justify-self: center;
             &::before {
                 content: "";
                 position: absolute;
@@ -476,6 +479,10 @@
                 background-position: center;
                 z-index: -1; /* якщо потрібно контролювати порядок накладання */
             }
+        }
+        @media (max-width: $mobile) {
+            max-width: 100% !important;
+            width: 100% !important;
         }
     }
     // .solutions__list
@@ -492,7 +499,6 @@
         line-height: 24px; /* 150% */
         @include adaptiveValue("font-size", 16, 12);
         list-style: none;
-
         &::before {
             content: "";
             position: absolute;
@@ -540,6 +546,235 @@
         @media (max-width: $tablet) {
             display: none;
         }
+    }
+}
+//========================================================================================================================================================
+// Parthnership
+.parthnership {
+    // .parthnership__top
+    &__top {
+        padding: toRem(46) toRem(0) toRem(20) toRem(0);
+        background-image: url("@img/parthnership.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @media (max-width: $tablet) {
+            background-image: url("@img/parthnership-tab.png");
+        }
+        @media (max-width: $mobile) {
+            background-image: url("@img/parthnership-mob.png");
+        }
+    }
+    // .parthnership__container
+    &__container {
+    }
+    // .parthnership__title
+    &__title {
+    }
+    // .parthnership__desc
+    &__desc {
+    }
+    // .parthnership__subtitle
+    &__subtitle {
+        @include adaptiveValue("margin-top", 60, 40);
+        font-size: toRem(20);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    // .parthnership__wrapper
+    &__wrapper {
+        margin-top: toRem(50);
+        padding-top: toRem(34);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: toRem(10);
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: toRem(-9);
+            left: toRem(41);
+            // width: 80.5%;
+            @include adaptiveValue("width", 1046, 240);
+            height: 2px;
+            background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+        }
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: toRem(160);
+            row-gap: toRem(30);
+            &::before {
+                display: none;
+            }
+            @include adaptiveValue("column-gap", 160, 80);
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    // .parthnership__item
+    &__item {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: toRem(-43); // Відступ до верхньої лінії
+            left: toRem(40);
+            transform: translateX(-50%);
+            width: 2px;
+            height: toRem(36);
+            background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+        }
+        &:first-child {
+            &::before {
+                top: toRem(-70);
+                height: toRem(60);
+            }
+        }
+        @media (max-width: $tablet) {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    // .parthnership__num
+    &__num {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: toRem(20) toRem(30);
+        @include adaptiveValue("width", 80, 40);
+        @include adaptiveValue("height", 80, 40);
+        border-radius: 100%;
+        background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+        color: #fff;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+        @include adaptiveValue("font-size", 36, 20);
+    }
+    // .parthnership__item-desc
+    &__item-desc {
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        @include adaptiveValue("font-size", 16, 12);
+        @include adaptiveValue("margin-top", 34, 20);
+    }
+    &__bottom {
+        margin-top: toRem(35);
+        min-height: toRem(320);
+        position: relative;
+        background-image: url("@img/parthnership-bg.png");
+        background-size: auto cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        @media (max-width: $tablet) {
+            background-image: url("@img/parthnership-bg-tab.png");
+            background-size: cover;
+        }
+        @media (max-width: $mobile) {
+            background-image: url("@img/mission-mob.png");
+            background-size: cover;
+        }
+    }
+    &__content {
+        background: #fff;
+        position: absolute;
+        top: toRem(15);
+        right: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: toRem(38);
+        row-gap: toRem(24);
+        @include adaptiveValue("max-width", 934, 500);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 80% !important;
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 90% !important;
+            width: 90% !important;
+            padding: toRem(10) toRem(10) toRem(25) toRem(10);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &-item {
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+            padding-left: toRem(40);
+            @include adaptiveValue("font-size", 16, 12);
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: toRem(5);
+                width: toRem(30);
+                height: toRem(30);
+                border-radius: 100%;
+                background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+                z-index: 1;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: toRem(7.5);
+                top: toRem(13.5);
+                width: toRem(15);
+                height: toRem(15);
+                background-image: url("@img/icons/check-white.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 2;
+            }
+        }
+    }
+    &__benefits {
+        margin-top: toRem(40);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: toRem(50);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: toRem(80);
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: toRem(40);
+        }
+        &-item {
+            @media (max-width: $mobile) {
+                justify-self: center;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        &-icon {
+            max-width: toRem(120);
+            width: 100%;
+            max-height: toRem(112);
+            height: 100%;
+        }
+        &-desc {
+            margin-top: toRem(27);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+            @include adaptiveValue("font-size", 16, 12);
+        }
+    }
+}
+.title {
+}
+.section {
+    // .section__desc
+    &__desc {
     }
 }
 
