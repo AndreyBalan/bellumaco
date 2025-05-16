@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+    @@include('html/_head.htm',{ "title":"Bellumaco | Contact Us" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_popup.htm',{})
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__menu menu">
+                        <a href="/ru">
+                            <img src="@img/logo.svg" class="header__logo" alt="Defdil" />
+                        </a>
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="/ru" class="menu__link">Преимущества</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ru" class="menu__link">Особенности</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ru" class="menu__link">Технологии</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ru" class="menu__link">Решения </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ru" class="menu__link">Сотрудничество</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="contact.html" class="menu__link active">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="menu__btns">
+                            <button type="button" class="menu__icon icon-menu">
+                                <span></span> <span class="sr-only">Menu</span>
+                            </button>
+                            <div class="language-selector">
+                                <input
+                                    type="checkbox"
+                                    id="language-toggle"
+                                    class="language-selector__toggle" />
+                                <label for="language-toggle" class="language-selector__current">
+                                    <span class="language-selector__code">RU</span>
+                                </label>
+                                <div class="language-selector__dropdown">
+                                    <a href="/en" class="language-selector__item">
+                                        <span class="language-selector__code">EN</span>
+                                    </a>
+                                    <a href="/ar" class="language-selector__item">
+                                        <span class="language-selector__code">AR</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="page">
+                <section class="contact">
+                    <div class="contact__container">
+                        <div class="contact__wrapper">
+                            <form
+                                class="contact__form"
+                                action="files/sendmail/sendmail.php"
+                                method="POST"
+                                data-popup-message="#form-message"
+                                data-ajax>
+                                <h2 class="contact__title">Get Started with a Free Demo</h2>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    placeholder="Name " />
+                                <input
+                                    type="text"
+                                    id="surname"
+                                    name="surname"
+                                    required
+                                    placeholder="Surname " />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    placeholder="E-mail " />
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="Phone number " />
+
+                                <div class="contact__form-row contact__form-row-checkbox">
+                                    <input
+                                        type="checkbox"
+                                        class="custom-checkbox"
+                                        id="check"
+                                        name="check"
+                                        required
+                                        value="yes" />
+                                    <label for="check"></label>
+                                    <p>
+                                        I have read and agree with Defdil  Privacy Policy and Terms
+                                        of Use
+                                    </p>
+                                </div>
+
+                                <button class="form-btn btn solutions__btn btn-text" type="submit">
+                                    <span>Отправить запрос</span>
+                                </button>
+                            </form>
+                            <div class="contact__info">
+                                <h2 class="contact__title">Feel Free to Contact Us</h2>
+                                <p class="contact__desc">
+                                    Reach out to us using the contact information provided on this
+                                    page, and we'll respond to you promptly!
+                                </p>
+                                <h3 class="contact__heading">Defdil</h3>
+                                <p class="contact__info-desc address">
+                                    9, Vasili Michailidi, 3026, Limassol, Cyprus
+                                </p>
+                                <h3 class="contact__heading">Customer Support:</h3>
+                                <p class="contact__info-desc mail">sales@defdil.ltd</p>
+                                <p class="contact__info-desc mail">support@defdil.ltd</p>
+                                <p class="contact__info-desc phone">+44 75 77878360</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__logo">
+                        <img src="@img/logo.svg" alt="Defdil" />
+                    </div>
+                    <div class="footer__wrapper">
+                        <div class="footer__contacts">
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">Defdil</p>
+                                <span class="footer__contacts-desc"
+                                    >9, Vasili Michailidi, 3026, Limassol, Cyprus</span
+                                >
+                            </div>
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">Customer Support:</p>
+                                <span class="footer__contacts-desc">sales@defdil.ltd</span>
+                                <span class="footer__contacts-desc">support@defdil.ltd</span>
+                            </div>
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">Sales Inquiries:</p>
+                                <span class="footer__contacts-desc">sales@defdil.ltd</span>
+                                <span class="footer__contacts-desc">+44 75 77878360</span>
+                            </div>
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">General Inquiries:</p>
+                                <span class="footer__contacts-desc">info@defdil.ltd</span>
+                                <span class="footer__contacts-desc">+44 75 77878360</span>
+                            </div>
+                        </div>
+                        <div class="footer__nav" data-da=".footer__wrapper, 767, 0">
+                            <div class="footer__nav-item">
+                                <p class="footer__nav-heading">Product</p>
+                                <a href="index.html" class="footer__nav-link">Home</a>
+                                <a href="index.html" class="footer__nav-link">Why Defdil?</a>
+                                <a href="index.html" class="footer__nav-link">Solutions</a>
+                                <a href="index.html" class="footer__nav-link">Case Studies</a>
+                                <a href="contact.html" class="footer__nav-link">Contact</a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <p class="footer__nav-heading">Resources</p>
+                                <a href="contact.html" class="footer__nav-link">Help Center</a>
+                                <a href="legal.html" class="footer__nav-link">Legal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <span
+                        >&copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        Defdil</span
+                    >
+                </div>
+            </footer>
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
+</html>
