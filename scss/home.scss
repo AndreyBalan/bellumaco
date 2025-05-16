@@ -1,3 +1,91 @@
 //====================================================================================================
+// Hero
+.hero {
+    // .hero__container
+    &__container {
+    }
+    &__main {
+        position: relative;
+    }
+    // .hero__content
+    &__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        // max-width: toRem(688);
+        @include adaptiveValue("max-width", 688, 100);
+        background-color: #fff;
+        padding-top: toRem(10);
+        @media (max-width: $tablet) {
+            background-color: transparent;
+            position: relative;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+    // .hero__title
+    &__title {
+        font-family: "Montserrat";
+        @include adaptiveValue("font-size", 36, 16);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 121.906%;
+        background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media (max-width: $tablet) {
+            display: flex;
+            justify-content: space-between;
+            align-items: start !important;
+            gap: toRem(10);
+        }
+    }
+    // .hero__desc
+    &__desc {
+        @include adaptiveValue("margin-top", 20, 10);
+        color: #000;
+        @include adaptiveValue("font-size", 16, 12);
+        font-style: normal;
+        font-weight: 400;
+        line-height: toRem(24); /* 150% */
+    }
+    // .hero__btn
+    &__btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @media (max-width: $tablet) {
+            position: relative;
+        }
+    }
+    &__img {
+        width: 100%;
+        &:nth-child(1) {
+            display: block;
+            @media (max-width: $tablet) {
+                display: none;
+            }
+        }
+        &:nth-child(2) {
+            display: none;
+            @media (max-width: $tablet) {
+                display: block;
+            }
+            @media (max-width: $mobile) {
+                display: none;
+            }
+        }
+        &:nth-child(3) {
+            display: none;
+            @media (max-width: $mobile) {
+                display: block;
+            }
+        }
+    }
+}
 
 //====================================================================================================
+
+//========================================================================================================================================================
