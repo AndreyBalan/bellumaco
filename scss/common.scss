@@ -5,6 +5,38 @@ section {
     @include adaptiveValue("padding-bottom", 60, 30);
 }
 
+// Title
+.title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121.906%;
+    background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include adaptiveValue("font-size", 36, 16);
+    @include adaptiveValue("max-width", 976, 600);
+    @media (max-width: $tablet) {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+// Desc
+.section__desc {
+    font-style: normal;
+    font-weight: 400;
+    line-height: toRem(24); /* 150% */
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("margin-top", 30, 10);
+    @include adaptiveValue("max-width", 860, 600);
+    @media (max-width: $tablet) {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
 // btn
 .btn {
     position: relative;
