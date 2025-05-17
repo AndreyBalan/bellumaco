@@ -256,6 +256,10 @@
         //     padding: toRem(30) toRem(15);
         //     background-size: cover;
         // }
+        [dir="rtl"] & {
+            background-position: left;
+            background-image: url("@img/features-rtl.png");
+        }
     }
     // .features__title
     &__title {
@@ -564,6 +568,15 @@
         @media (max-width: $mobile) {
             background-image: url("@img/parthnership-mob.png");
         }
+        [dir="rtl"] & {
+            background-image: url("@img/parthnership-rtl.png");
+            @media (max-width: $tablet) {
+                background-image: url("@img/parthnership-tab-rtl.png");
+            }
+            @media (max-width: $mobile) {
+                background-image: url("@img/parthnership-mob-rtl.png");
+            }
+        }
     }
     // .parthnership__container
     &__container {
@@ -599,6 +612,9 @@
             @include adaptiveValue("width", 1046, 240);
             height: 2px;
             background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+            [dir="rtl"] & {
+                right: toRem(41);
+            }
         }
         @media (max-width: $tablet) {
             grid-template-columns: repeat(2, 1fr);
@@ -625,6 +641,9 @@
             width: 2px;
             height: toRem(36);
             background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+            [dir="rtl"] & {
+                right: toRem(38);
+            }
         }
         &:first-child {
             &::before {
