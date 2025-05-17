@@ -33,7 +33,10 @@
         @include adaptiveValue("gap", 46, 0);
         @media (max-width: $tablet) {
             flex-direction: column;
-            gap: toRem(42);
+            gap: toRem(42) !important;
+        }
+        @media (max-width: $mobile) {
+            gap: toRem(42) !important;
         }
     }
     // .menu__item
@@ -48,10 +51,12 @@
             text-decoration: none;
             @include adaptiveValue("font-size", 20, 6);
             @media (max-width: $tablet) {
-                font-size: toRem(20);
+                font-size: toRem(20) !important;
             }
+
             @media (max-width: $mobile) {
                 z-index: 10;
+                font-size: toRem(20) !important;
             }
 
             @media (any-hover: hover) {
