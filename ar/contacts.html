@@ -1,34 +1,38 @@
 <!doctype html>
 <html lang="en">
-    @@include('html/_head.htm',{ "title":"Bellumaco | Контакты" })
+    @@include('html/_head.htm',{ "title":"Bellumaco | اتصالات" })
     <body>
         <div class="wrapper">
             @@include('html/_popup.htm',{})
             <header class="header">
                 <div class="header__container">
                     <div class="header__menu menu">
-                        <a href="/ru">
-                            <img src="@img/logo.svg" class="header__logo" alt="Defdil" />
+                        <a href="/ar">
+                            <img src="@img/logo.svg" class="header__logo" alt="Bellumaco" />
                         </a>
                         <nav class="menu__body">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="/ru" class="menu__link">Преимущества</a>
+                                    <a href="#" data-goto=".benefits" class="menu__link">المزايا</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="/ru" class="menu__link">Особенности</a>
+                                    <a href="#" data-goto=".features" class="menu__link">الميز</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="/ru" class="menu__link">Технологии</a>
+                                    <a href="#" data-goto=".technology" class="menu__link"
+                                        >التكنولوج</a
+                                    >
                                 </li>
                                 <li class="menu__item">
-                                    <a href="/ru" class="menu__link">Решения </a>
+                                    <a href="#" data-goto=".solutions" class="menu__link">الحل </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="/ru" class="menu__link">Сотрудничество</a>
+                                    <a href="#" data-goto=".parthnership" class="menu__link"
+                                        >الشراكة</a
+                                    >
                                 </li>
                                 <li class="menu__item">
-                                    <a href="contact.html" class="menu__link active">Контакты</a>
+                                    <a href="contacts.html" class="menu__link active">اتصال</a>
                                 </li>
                             </ul>
                         </nav>
@@ -42,14 +46,14 @@
                                     id="language-toggle"
                                     class="language-selector__toggle" />
                                 <label for="language-toggle" class="language-selector__current">
-                                    <span class="language-selector__code">RU</span>
+                                    <span class="language-selector__code">AR</span>
                                 </label>
                                 <div class="language-selector__dropdown">
+                                    <a href="/" class="language-selector__item">
+                                        <span class="language-selector__code">RU</span>
+                                    </a>
                                     <a href="/en" class="language-selector__item">
                                         <span class="language-selector__code">EN</span>
-                                    </a>
-                                    <a href="/ar" class="language-selector__item">
-                                        <span class="language-selector__code">AR</span>
                                     </a>
                                 </div>
                             </div>
@@ -57,6 +61,7 @@
                     </div>
                 </div>
             </header>
+
             <main class="page">
                 <section class="contact">
                     <div class="contact__container">
@@ -67,30 +72,30 @@
                                 method="POST"
                                 data-popup-message="#form-message"
                                 data-ajax>
-                                <h2 class="contact__title">Начните с бесплатной демонстрации</h2>
+                                <h2 class="contact__title">ابدأ بتجربة مجانية</h2>
                                 <input
                                     type="text"
                                     id="name"
                                     name="name"
                                     required
-                                    placeholder="Имя " />
+                                    placeholder="الاسم " />
                                 <input
                                     type="text"
                                     id="surname"
                                     name="surname"
                                     required
-                                    placeholder="Фамилия " />
+                                    placeholder="اللقب " />
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
                                     required
-                                    placeholder="E-mail " />
+                                    placeholder="البريد الإلكتروني " />
                                 <input
                                     type="text"
                                     name="phone"
                                     id="phone"
-                                    placeholder="Номер телефона " />
+                                    placeholder="رقم الهاتف " />
 
                                 <div class="contact__form-row contact__form-row-checkbox">
                                     <input
@@ -102,26 +107,25 @@
                                         value="yes" />
                                     <label for="check"></label>
                                     <p>
-                                        Я прочитал и согласен с политикой конфиденциальности и
-                                        условиями использования Bellumaco
+                                        لقد قرأت سياسة الخصوصية وشروط استخدام Bellumaco وأوافق عليها
                                     </p>
                                 </div>
 
                                 <button class="form-btn btn solutions__btn btn-text" type="submit">
-                                    <span>Отправить запрос</span>
+                                    <span>إرسال</span>
                                 </button>
                             </form>
                             <div class="contact__info">
-                                <h2 class="contact__title">Свяжитесь с нами</h2>
+                                <h2 class="contact__title">اتصل</h2>
                                 <p class="contact__desc">
-                                    Свяжитесь с нами по контактным данным, указанным на этой
-                                    странице, и мы ответим вам незамедлительно!
+                                    اتصل بنا على بيانات الاتصال الموضحة في هذه الصفحة وسنرد عليك على
+                                    الفور!
                                 </p>
                                 <h3 class="contact__heading">Bellumaco</h3>
                                 <p class="contact__info-desc address">
-                                    UAE, Dubai, Iris Bay Tower, office С-42
+                                    الإمارات العربية المتحدة، دبي، برج إيريس باي، مكتب С-42
                                 </p>
-                                <h3 class="contact__heading">Поддержка клиентов:</h3>
+                                <h3 class="contact__heading">دعم العملاء::</h3>
                                 <p class="contact__info-desc mail">bellumaco.ccrms@gmail.com</p>
 
                                 <p class="contact__info-desc phone">+971 5 066 34653</p>
