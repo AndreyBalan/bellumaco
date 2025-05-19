@@ -306,6 +306,13 @@
             background-repeat: no-repeat;
             column-gap: toRem(10);
         }
+        [dir="rtl"] & {
+            @media (max-width: $mobile) {
+                background-position: right;
+                background-size: contain;
+                background-image: url("@img/features-mob-rtl.png");
+            }
+        }
     }
     // .features__item
     &__item {

@@ -1,9 +1,71 @@
 <!doctype html>
 <html lang="ru">
-    @@include('html/_head.htm',{ "title":"BELLUMACO | Legal" })
+    @@include('html/_head-en.htm',{ "title":"BELLUMACO | Legal" })
     <body>
         <div class="wrapper">
-            @@include('html/_header-en.htm',{})
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__menu menu">
+                        <a href="/en">
+                            <img src="../@img/logo.svg" class="header__logo" alt="Bellumaco" />
+                        </a>
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="/en" data-goto=".benefits" class="menu__link"
+                                        >Benefits</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/en" data-goto=".features" class="menu__link"
+                                        >Features</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/en" data-goto=".technology" class="menu__link"
+                                        >Technology</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/en" data-goto=".solutions" class="menu__link"
+                                        >Solutions
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/en" data-goto=".parthnership" class="menu__link"
+                                        >Partnership</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="en/contacts.html" class="menu__link active">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="menu__btns">
+                            <button type="button" class="menu__icon icon-menu">
+                                <span></span> <span class="sr-only">Menu</span>
+                            </button>
+                            <div class="language-selector">
+                                <input
+                                    type="checkbox"
+                                    id="language-toggle"
+                                    class="language-selector__toggle" />
+                                <label for="language-toggle" class="language-selector__current">
+                                    <span class="language-selector__code">EN</span>
+                                </label>
+                                <div class="language-selector__dropdown">
+                                    <a href="/" class="language-selector__item">
+                                        <span class="language-selector__code">RU</span>
+                                    </a>
+                                    <a href="/ar" class="language-selector__item">
+                                        <span class="language-selector__code">AR</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
             <main class="page">
                 <section class="legal">
                     <div class="legal__container">
@@ -97,7 +159,65 @@
                 </section>
             </main>
 
-            @@include('html/_footer-en.htm',{})
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__logo">
+                        <img src="../@img/logo.svg" alt="Bellumaco" />
+                    </div>
+                    <div class="footer__wrapper">
+                        <div class="footer__contacts">
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">
+                                    BELLUMACO COST CONTROL & RISK MANAGEMENT SERVICES L.L.C
+                                </p>
+                                <span class="footer__contacts-desc"
+                                    >UAE, Dubai, Iris Bay Tower, office С-42</span
+                                >
+                            </div>
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">General Inquiries:</p>
+                                <span class="footer__contacts-desc">bellumaco.ccrms@gmail.com</span>
+                                <span class="footer__contacts-desc">+971 5 066 34653</span>
+                            </div>
+                        </div>
+                        <div class="footer__nav" data-da=".footer__wrapper, 767, 0">
+                            <div class="footer__nav-item">
+                                <p class="footer__contacts-heading">Product</p>
+                                <a href="/en" class="footer__nav-link" data-goto=".benefits"
+                                    >Benefits</a
+                                >
+                                <a href="/en" class="footer__nav-link" data-goto=".features"
+                                    >Features</a
+                                >
+                                <a href="/en" class="footer__nav-link" data-goto=".technology"
+                                    >Technology</a
+                                >
+                                <a href="/en" class="footer__nav-link" data-goto=".solutions"
+                                    >Solutions</a
+                                >
+                                <a href="/en" class="footer__nav-link" data-goto=".parthnership"
+                                    >Partnership</a
+                                >
+                                <a href="contacts.html" class="footer__nav-link">Contact</a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <p class="footer__contacts-heading">Resources</p>
+                                <a href="en/contacts.html" class="footer__nav-link">Help Center</a>
+                                <a href="en/legal.html" class="footer__nav-link">Legal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <span
+                        >&copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        Bellumaco</span
+                    >
+                </div>
+            </footer>
         </div>
         @@include('html/_popup-en.htm',{}) @@include('html/_js.htm',{})
     </body>

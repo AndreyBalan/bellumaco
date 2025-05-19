@@ -1,102 +1,153 @@
 <!doctype html>
-<html lang="ru">
-    @@include('html/_head.htm',{ "title":"BELLUMACO | AR" })
+<html lang="ar" dir="rtl">
+    @@include('html/_head-ar.htm',{ "title":"BELLUMACO | AR" })
     <body>
         <div class="wrapper">
-            @@include('html/_header-ar.htm',{})
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__menu menu">
+                        <a href="/ar">
+                            <img src="../@img/logo.svg" class="header__logo" alt="Bellumaco" />
+                        </a>
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".benefits" class="menu__link"
+                                        >المزايا</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".features" class="menu__link">الميز</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".technology" class="menu__link"
+                                        >التكنولوج</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".solutions" class="menu__link"
+                                        >الحل
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".parthnership" class="menu__link"
+                                        >الشراكة</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="ar/contacts.html" class="menu__link">اتصال</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="menu__btns">
+                            <button type="button" class="menu__icon icon-menu">
+                                <span></span> <span class="sr-only">Menu</span>
+                            </button>
+                            <div class="language-selector">
+                                <input
+                                    type="checkbox"
+                                    id="language-toggle"
+                                    class="language-selector__toggle" />
+                                <label for="language-toggle" class="language-selector__current">
+                                    <span class="language-selector__code">AR</span>
+                                </label>
+                                <div class="language-selector__dropdown">
+                                    <a href="/" class="language-selector__item">
+                                        <span class="language-selector__code">RU</span>
+                                    </a>
+                                    <a href="/en" class="language-selector__item">
+                                        <span class="language-selector__code">EN</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
             <main class="page">
                 <section class="legal">
                     <div class="legal__container">
-                        <h1 class="legal__title">Юридическая информация</h1>
+                        <h1 class="legal__title">المعلومات القانونية</h1>
                         <div class="legal__wrapper">
                             <div class="legal__privacy">
-                                <h2 class="legal__heading">Политика конфиденциальности</h2>
+                                <h2 class="legal__heading">سياسة الخصوصية</h2>
                                 <p class="legal__desc">
-                                    В BELLUMACO мы очень серьезно относимся к защите личной
-                                    информации наших клиентов и пользователей. Данная политика
-                                    конфиденциальности описывает, как мы собираем, используем и
-                                    раскрываем ваши данные при использовании нашего сайта и услуг.
+                                    في BELLUMACO، نحن نولي أهمية كبيرة لحماية المعلومات الشخصية
+                                    لعملائنا ومستخدمينا. تصف سياسة الخصوصية هذه كيفية جمعنا لبياناتك
+                                    واستخدامها والإفصاح عنها عند استخدامك لموقعنا الإلكتروني
+                                    وخدماتنا.
                                 </p>
-                                <h3 class="legal__subheading">Сбор данных:</h3>
+                                <h3 class="legal__subheading">جمع البيانات:</h3>
                                 <p class="legal__desc">
-                                    Мы получаем персональные данные, которые вы добровольно
-                                    предоставляете нам, включая ваше имя, адрес электронной почты и
-                                    контактную информацию при регистрации на нашем сайте, подписке
-                                    на рассылку или обращении в службу поддержки.
+                                    نتلقى البيانات الشخصية التي تقدمها لنا طوعًا، بما في ذلك اسمك
+                                    وعنوان بريدك الإلكتروني ومعلومات الاتصال الخاصة بك عند التسجيل
+                                    في موقعنا أو الاشتراك في النشرة الإخبارية أو التواصل معنا للحصول
+                                    على الدعم.
                                 </p>
-                                <h3 class="legal__subheading">Использование данных:</h3>
+                                <h3 class="legal__subheading">استخدام البيانات:</h3>
                                 <p class="legal__desc">
-                                    Информация, которую мы собираем, помогает нам предоставлять и
-                                    улучшать наши услуги, обрабатывать транзакции и поддерживать с
-                                    вами связь.
+                                    تساعدنا المعلومات التي نجمعها على تقديم خدماتنا وتحسينها،
+                                    ومعالجة المعاملات، والتواصل معك.
                                 </p>
-                                <h3 class="legal__subheading">Передача данных:</h3>
+                                <h3 class="legal__subheading">مشاركة البيانات:</h3>
                                 <p class="legal__desc">
-                                    Мы не продаем и не передаём ваши персональные данные третьим
-                                    лицам. Информация может быть передана только в случае
-                                    необходимости для предоставления наших услуг, соблюдения
-                                    требований закона или защиты наших прав.
+                                    لا نبيع أو نشارك بياناتك الشخصية مع أطراف ثالثة. يمكن مشاركة
+                                    المعلومات فقط عند الضرورة لتقديم خدماتنا، أو الامتثال للمتطلبات
+                                    القانونية، أو لحماية حقوقنا.
                                 </p>
-                                <h3 class="legal__subheading">Ваши права:</h3>
+                                <h3 class="legal__subheading">حقوقك:</h3>
                                 <p class="legal__desc">
-                                    Вы имеете право запросить доступ к своим персональным данным,
-                                    внести в них изменения или потребовать их удаления. Также вы
-                                    можете в любой момент отказаться от получения маркетинговых
-                                    сообщений от нас.
+                                    لديك الحق في طلب الوصول إلى بياناتك الشخصية، وتعديلها، أو طلب
+                                    حذفها. كما يمكنك في أي وقت إلغاء الاشتراك في الرسائل التسويقية
+                                    من جانبنا.
                                 </p>
-                                <h3 class="legal__subheading">Безопасность данных:</h3>
+                                <h3 class="legal__subheading">أمان البيانات:</h3>
                                 <p class="legal__desc">
-                                    Мы используем современные стандарты информационной безопасности
-                                    для предотвращения несанкционированного доступа, изменения или
-                                    утечки ваших данных.
+                                    نستخدم معايير أمان معلومات حديثة لمنع الوصول غير المصرح به أو
+                                    التعديل أو تسرب بياناتك.
                                 </p>
-                                <h2 class="legal__heading">Политика использования файлов cookie</h2>
+                                <h2 class="legal__heading">سياسة ملفات تعريف الارتباط (الكوكيز)</h2>
                                 <p class="legal__desc">
-                                    Наш сайт использует файлы cookie для улучшения пользовательского
-                                    опыта, анализа трафика и понимания поведения посетителей.
+                                    يستخدم موقعنا ملفات تعريف الارتباط لتحسين تجربة المستخدم، وتحليل
+                                    حركة المرور، وفهم سلوك الزوار.
                                 </p>
-                                <h3 class="legal__subheading">Что такое cookie?</h3>
+                                <h3 class="legal__subheading">ما هي ملفات تعريف الارتباط؟</h3>
                                 <p class="legal__desc">
-                                    Cookie — это небольшие файлы, сохраняемые на вашем устройстве
-                                    при посещении сайта, которые помогают запомнить ваши
-                                    предпочтения и настройки.
+                                    ملفات تعريف الارتباط هي ملفات صغيرة يتم تخزينها على جهازك عند
+                                    زيارة موقع إلكتروني، وتساعد في تذكر تفضيلاتك وإعداداتك.
                                 </p>
-                                <h3 class="legal__subheading">Как мы используем cookie</h3>
+                                <h3 class="legal__subheading">كيف نستخدم ملفات تعريف الارتباط</h3>
                                 <p class="legal__desc">
-                                    Мы используем cookie для оптимизации работы нашего сайта, сбора
-                                    статистических данных и показа релевантной рекламы.
+                                    نستخدم ملفات تعريف الارتباط لتحسين أداء موقعنا، وجمع البيانات
+                                    الإحصائية، وعرض الإعلانات ذات الصلة.
                                 </p>
                             </div>
                             <div class="legal__terms">
-                                <h2 class="legal__heading">Условия использования</h2>
+                                <h2 class="legal__heading">شروط الاستخدام</h2>
                                 <p class="legal__desc">
-                                    Эти условия использования регулируют ваш доступ к сайту
-                                    BELLUMACO и его использование. Получая доступ к нашим услугам,
-                                    вы соглашаетесь соблюдать данные условия.
+                                    تحكم شروط الاستخدام هذه وصولك إلى موقع BELLUMACO واستخدامك له.
+                                    باستخدامك لخدماتنا، فإنك توافق على الالتزام بهذه الشروط.
                                 </p>
-                                <h3 class="legal__subheading">Допустимое использование:</h3>
+                                <h3 class="legal__subheading">الاستخدام المسموح به:</h3>
                                 <p class="legal__desc">
-                                    Вы соглашаетесь использовать наши услуги в соответствии с
-                                    действующим законодательством и не использовать их для
-                                    незаконной или вредоносной деятельности.
+                                    توافق على استخدام خدماتنا وفقًا للقوانين السارية وعدم استخدامها
+                                    لأي أنشطة غير قانونية أو ضارة.
                                 </p>
-                                <h3 class="legal__subheading">Интеллектуальная собственность:</h3>
+                                <h3 class="legal__subheading">الملكية الفكرية:</h3>
                                 <p class="legal__desc">
-                                    Весь контент на нашем сайте — текст, графика, логотипы,
-                                    программное обеспечение — является собственностью BELLUMACO или
-                                    используется по лицензии и защищён авторским правом и другими
-                                    законами об интеллектуальной собственности.
+                                    جميع المحتويات الموجودة على موقعنا — من نصوص، ورسومات، وشعارات،
+                                    وبرمجيات — هي ملك لـ BELLUMACO أو مستخدمة بموجب ترخيص، ومحمية
+                                    بموجب حقوق النشر وقوانين الملكية الفكرية الأخرى.
                                 </p>
-                                <h3 class="legal__subheading">Ответственность за аккаунт:</h3>
+                                <h3 class="legal__subheading">مسؤولية الحساب:</h3>
                                 <p class="legal__desc">
-                                    Вы несёте ответственность за безопасность своего аккаунта и за
-                                    все действия, совершаемые под вашим аккаунтом.
+                                    أنت مسؤول عن أمان حسابك وعن جميع الأنشطة التي تتم من خلاله.
                                 </p>
-                                <h3 class="legal__subheading">Отказ от ответственности:</h3>
+                                <h3 class="legal__subheading">إخلاء المسؤولية:</h3>
                                 <p class="legal__desc">
-                                    Наши услуги предоставляются "как есть", без каких-либо явных или
-                                    подразумеваемых гарантий. Мы не гарантируем бесперебойную работу
-                                    сервиса или отсутствие ошибок.
+                                    يتم تقديم خدماتنا "كما هي" دون أي ضمانات صريحة أو ضمنية. لا نضمن
+                                    عمل الخدمة بدون انقطاع أو خلوها من الأخطاء.
                                 </p>
                             </div>
                         </div>
@@ -104,7 +155,67 @@
                 </section>
             </main>
 
-            @@include('html/_footer-ar.htm',{})
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__logo">
+                        <img src="../@img/logo.svg" alt="Bellumaco" />
+                    </div>
+                    <div class="footer__wrapper">
+                        <div class="footer__contacts">
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">
+                                    BELLUMACO COST CONTROL & RISK MANAGEMENT SERVICES L.L.C
+                                </p>
+                                <span class="footer__contacts-desc"
+                                    >الإمارات العربية المتحدة، دبي، برج إيريس باي، مكتب С-42</span
+                                >
+                            </div>
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">أسئلة عامة:</p>
+                                <span class="footer__contacts-desc">bellumaco.ccrms@gmail.com</span>
+                                <span class="footer__contacts-desc">+971 5 066 34653</span>
+                            </div>
+                        </div>
+                        <div class="footer__nav" data-da=".footer__wrapper, 767, 0">
+                            <div class="footer__nav-item">
+                                <p class="footer__contacts-heading">منتجات</p>
+                                <a href="/ar" class="footer__nav-link" data-goto=".benefits"
+                                    >المزايا</a
+                                >
+                                <a href="/ar" class="footer__nav-link" data-goto=".features"
+                                    >الميز</a
+                                >
+                                <a href="/ar" class="footer__nav-link" data-goto=".technology"
+                                    >التكنولوج</a
+                                >
+                                <a href="/ar" class="footer__nav-link" data-goto=".solutions"
+                                    >الحل</a
+                                >
+                                <a href="/ar" class="footer__nav-link" data-goto=".parthnership"
+                                    >الشراكة</a
+                                >
+                                <a href="contacts.html" class="footer__nav-link">اتصال</a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <p class="footer__contacts-heading">موارد</p>
+                                <a href="ar/contacts.html" class="footer__nav-link"
+                                    >مركز المساعدة</a
+                                >
+                                <a href="ar/legal.html" class="footer__nav-link">قانوني</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <span
+                        >&copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        Bellumaco</span
+                    >
+                </div>
+            </footer>
         </div>
         @@include('html/_popup-ar.htm',{}) @@include('html/_js.htm',{})
     </body>
