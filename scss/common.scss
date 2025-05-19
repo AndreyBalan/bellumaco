@@ -15,7 +15,7 @@ section {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @include adaptiveValue("font-size", 36, 16);
+    @include adaptiveValue("font-size", 36, 23);
     @include adaptiveValue("max-width", 976, 600);
     @media (max-width: $tablet) {
         max-width: 100% !important;
@@ -28,7 +28,7 @@ section {
     font-style: normal;
     font-weight: 400;
     line-height: toRem(24); /* 150% */
-    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("font-size", 16, 12);
     @include adaptiveValue("margin-top", 30, 10);
     @include adaptiveValue("max-width", 860, 600);
     @media (max-width: $tablet) {
