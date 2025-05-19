@@ -395,6 +395,8 @@
         svg.svg-fix {
             width: toRem(80);
             height: toRem(84);
+            @include adaptiveValue("width", 80, 40);
+            @include adaptiveValue("height", 84, 44);
         }
     }
     // .technology__item-heading
@@ -667,7 +669,7 @@
     }
     // .parthnership__wrapper
     &__wrapper {
-        margin-top: toRem(50);
+        @include adaptiveValue("margin-top", 60, 40);
         padding-top: toRem(34);
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -698,6 +700,7 @@
         @media (max-width: $mobile) {
             column-gap: toRem(40);
             row-gap: toRem(8);
+            padding-top: toRem(0);
         }
     }
     // .parthnership__item
@@ -946,11 +949,19 @@
                 height: toRem(16);
                 background-size: contain;
                 background-repeat: no-repeat;
+                @media (max-width: $mobile) {
+                }
             }
             &.address {
                 &::before {
                     content: "";
                     background-image: url("@img/icons/location.svg");
+                    @media (max-width: $tablet) {
+                        top: toRem(8);
+                    }
+                    @media (max-width: $mobile) {
+                        top: toRem(8);
+                    }
                 }
             }
             &.phone {
@@ -977,20 +988,23 @@
     // .contact__desc
     &__desc {
         color: #5a5a5a;
-        font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        @include adaptiveValue("margin-top", 20, 16);
+        @include adaptiveValue("margin-top", 20, 14);
+        @include adaptiveValue("font-size", 16, 12);
+        &.address {
+            color: red;
+        }
     }
     // .contact__heading
     &__heading {
-        color: #000;
+        color: #444444;
         margin-top: toRem(16);
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        @include adaptiveValue("font-size", 16, 14);
+        @include adaptiveValue("font-size", 20, 16);
     }
 }
 
