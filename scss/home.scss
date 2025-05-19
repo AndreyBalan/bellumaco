@@ -239,6 +239,9 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        width: 100% !important;
+        @include adaptiveValue("font-size", 20, 16);
+        @include adaptiveValue("margin-top", 30, 10);
     }
 }
 .title {
@@ -254,7 +257,7 @@
     // .features__container
     &__container {
         background-image: url("@img/features.png");
-        background-position: right;
+        background-position: right toRem(60) center;
         background-repeat: no-repeat;
         @media (max-width: $tablet) {
             background-image: none;
@@ -314,6 +317,9 @@
             background: #fff;
             box-shadow: none;
             margin-top: toRem(0);
+            max-width: toRem(275);
+            // max-width: 50%;
+            justify-self: center;
             @media (max-width: $tablet) {
                 max-width: 90% !important;
             }
@@ -365,6 +371,9 @@
         margin-top: toRem(20);
         display: flex;
         gap: toRem(30);
+        &:nth-child(3) {
+            margin-top: toRem(42);
+        }
     }
     // .technology__item-icon
     &__item-icon {
@@ -630,6 +639,16 @@
     }
     // .parthnership__desc
     &__desc {
+        font-style: normal;
+        font-weight: 400;
+        line-height: toRem(24); /* 150% */
+        @include adaptiveValue("font-size", 16, 12);
+        @include adaptiveValue("margin-top", 30, 10);
+        @include adaptiveValue("max-width", 730, 100);
+        @media (max-width: $tablet) {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
         @media (max-width: $mobile) {
             max-width: 80% !important;
         }
@@ -648,7 +667,7 @@
         padding-top: toRem(34);
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: toRem(10);
+        gap: toRem(40);
         position: relative;
         &::before {
             content: "";
