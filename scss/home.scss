@@ -798,9 +798,9 @@
         }
         @media (max-width: $mobile) {
             grid-template-columns: repeat(1, 1fr);
-            max-width: 70% !important;
+            max-width: 60% !important;
             // width: 80% !important;
-            padding: toRem(10) toRem(10) toRem(25) toRem(10);
+            padding: toRem(0) toRem(10) toRem(5) toRem(10);
             top: 0;
             right: 0;
             row-gap: toRem(18);
@@ -821,25 +821,34 @@
                 border-radius: 100%;
                 background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
                 z-index: 1;
-                // @include adaptiveValue("width", 30, 20);
-                // @include adaptiveValue("height", 30, 20);
+                @include adaptiveValue("width", 30, 20);
+                @include adaptiveValue("height", 30, 20);
+                @include adaptiveValue("left", 0, 10);
             }
             &::after {
                 content: "";
                 position: absolute;
                 left: toRem(7.5);
                 top: toRem(13.5);
-                width: toRem(15);
-                height: toRem(15);
+                // width: toRem(15);
+                // height: toRem(15);
                 background-image: url("@img/icons/check-white.svg");
                 background-repeat: no-repeat;
                 background-size: contain;
                 z-index: 2;
+                @include adaptiveValue("width", 15, 12);
+                @include adaptiveValue("height", 15, 12);
+                @include adaptiveValue("left", 7.5, 14);
+                @include adaptiveValue("top", 14, 10);
+                @media (max-width: $tablet) {
+                    // left: toRem(10);
+                    // top: toRem(12);
+                }
                 @media (max-width: $mobile) {
-                    left: toRem(8);
-                    top: toRem(14);
-                    width: toRem(14);
-                    height: toRem(14);
+                    // left: toRem(11);
+                    // top: toRem(11);
+                    // width: toRem(14);
+                    // height: toRem(14);
                 }
             }
         }
